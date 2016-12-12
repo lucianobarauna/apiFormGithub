@@ -6,7 +6,7 @@ module.exports = function (gulp, plugins, config) {
                         copyDist:[],
                         jsLib:[plugins.uglify],
                         jsScript:[plugins.uglify],
-
+                        css:[plugins.autoprefixer, plugins.cssmin]
                    }))
                    .pipe(gulp.dest(config.srcDist));
   });
