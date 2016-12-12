@@ -1,4 +1,3 @@
-# Boilerplate desenvolvimento web -  Em construção #
+# Projeto - Api que consome dados do Github #
 
-Favicons
-http://realfavicongenerator.net/
+Em desenvolvimento...
