@@ -3162,9 +3162,7 @@ body {
    Index
    ========================================================================== */
 .app {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 25px;
+  padding: 25px 15px;
   display: table;
   width: 100%;
   max-width: 540px;

@@ -25,25 +25,30 @@
     <![endif]-->
 </head>
 <body>
+    <!-- APP -->
     <main class="app">
         <h1 class="app_titl">Liste seus repositórios</h1>
+        <!-- FORM -->
         <form class="app_formpesq" method="GET">
             <input id="campo_apppesq" type="text" placeholder="Digite o nome de usuário">
             <button id="btn_apppesq" class="btn btn--lg btn--laranja"><i class="fa fa-search"></i>PESQUISAR</button>
         </form>
-        <article class="app_resut">
-            <header><h2>apiFormGithub</h2></head>
-            <p>Projeto pessoal de api consumindo o github. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
-            <footer>
-                <span class="app_resut_tag app_resut_tag--amarela"><i class="fa fa-star"></i>5 STAR</span>
-                <span class="app_resut_tag app_resut_tag--azul"><i class="fa fa-code-fork"></i>5 FORKS</span>
-                <a href="#" class="repo_link" title="Ver projeto"><i class="fa fa-link"></i>VER PROJETO</a>
-            </footer>
+        <!-- / FORM -->
 
-        </article>
-
+        <section id="resultado">
+            <article class="app_resut">
+                <header><h2>apiFormGithub</h2></head>
+                <p>Projeto pessoal de api consumindo o github. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                <footer>
+                    <span class="app_resut_tag app_resut_tag--amarela"><i class="fa fa-star"></i>5 STAR</span>
+                    <span class="app_resut_tag app_resut_tag--azul"><i class="fa fa-code-fork"></i>5 FORKS</span>
+                    <a href="#" class="repo_link" title="Ver projeto"><i class="fa fa-link"></i>VER PROJETO</a>
+                </footer>
+            </article>
+        </section>
 
     </main>
+    <!-- / APP -->
      <!-- build:jsLib js/scriptsApiGit_rodape.js -->
      <script src="js/jquery.js"></script>
      <script src="js/script_apiGithub.js"></script>
