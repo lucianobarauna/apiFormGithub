@@ -10,9 +10,9 @@ $(function(){
 
     function pesqRepositorios(){
         event.preventDefault();
-        var usuarioGit = "lucianobarauna";
+        var $campoPesq = $('#campo_apppesq').val();
         $.ajax({
-            url: 'https://api.github.com/users/' + usuarioGit + '/repos'
+            url: 'https://api.github.com/users/' + $campoPesq + '/repos'
         }).done(function(json){
             console.log(json);
             console.log(json[0].name);

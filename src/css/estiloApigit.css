@@ -3099,6 +3099,20 @@ a:hover {
   text-decoration: inherit;
 }
 
+form:after, form:before {
+  display: table;
+  content: " ";
+}
+
+form:after {
+  clear: both;
+}
+
+textarea {
+  max-width: 100%;
+  width: 100%;
+}
+
 /* ==========================================================================
    Geral
    ========================================================================== */
@@ -3111,25 +3125,183 @@ body {
 /* ==========================================================================
    Botoes
    ========================================================================== */
+.btn {
+  padding: 10px;
+  border-width: 1px;
+  border-color: transparent;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  opacity: 1;
+  transition-duration: .3s;
+  box-shadow: 0px 7px 18px -2px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover, .btn:active, .btn:active:focus {
+  opacity: .8;
+  transition-duration: .15s;
+}
+
+.btn .fa {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.btn--lg {
+  height: 56px;
+  line-height: 26px;
+  font-size: 20px;
+}
+
+.btn--laranja {
+  background-color: #ef5737;
+}
+
 /* ==========================================================================
    Index
    ========================================================================== */
 .app {
-  width: 540px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 25px;
+  display: table;
+  width: 100%;
+  max-width: 540px;
   margin-left: auto;
   margin-right: auto;
+  box-sizing: border-box;
 }
 
 .app_titl {
-  font: 50px 'opensanslight';
+  font: 8vw 'opensanslight';
+  text-align: center;
+}
+
+@media screen and (min-width: 440px) {
+  .app_titl {
+    font-size: 6vw;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .app_titl {
+    font-size: 5vw;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .app_titl {
+    font-size: 50px;
+  }
+}
+
+.app_formpesq {
+  margin-bottom: 30px;
 }
 
 .app_formpesq input[type='text'] {
   padding-right: 25px;
   padding-left: 25px;
+  margin-bottom: 20px;
+  width: 100%;
   height: 53px;
   font-size: 16px;
   color: #787878;
+  border-color: transparent;
   border-radius: 5px;
-  border: none;
+  box-sizing: border-box;
+  box-shadow: 0px 7px 18px -2px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (min-width: 992px) {
+  .app_formpesq input[type='text'] {
+    width: 55%;
+  }
+}
+
+.app_formpesq .btn {
+  width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .app_formpesq .btn {
+    margin-left: 30px;
+    width: 38%;
+  }
+}
+
+.app_resut {
+  margin-bottom: 35px;
+  padding: 20px;
+  color: #918c8c;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 7px 18px -2px rgba(0, 0, 0, 0.3);
+}
+
+.app_resut h2 {
+  margin-top: 0;
+  padding-bottom: 12px;
+  font: 28px 'opensanslight';
+  border-bottom: 1px solid #cccccc;
+}
+
+.app_resut_tag, .repo_link {
+  margin-right: 8px;
+  margin-bottom: 15px;
+  padding: 10px 12px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  background-color: gray;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 800px) {
+  .app_resut_tag, .repo_link {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: auto;
+    display: inline-block;
+  }
+}
+
+.app_resut_tag .fa, .repo_link .fa {
+  margin-right: 5px;
+}
+
+.app_resut_tag--amarela {
+  background-color: #fdc23f;
+}
+
+.app_resut_tag--azul {
+  background-color: #0265c1;
+}
+
+.repo_link {
+  opacity: 1;
+  text-decoration: none;
+  transition-duration: 0.15s;
+  background-color: #ef5737;
+}
+
+@media screen and (min-width: 800px) {
+  .repo_link {
+    float: right;
+  }
+}
+
+.repo_link:hover, .repo_linkactive, .repo_linkfocus {
+  transition-duration: 0.3s;
+}
+
+.repo_link:hover {
+  opacity: .8;
+}
+
+.repo_link:active, .repo_link:focus {
+  opacity: .5;
 }

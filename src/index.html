@@ -28,13 +28,20 @@
     <main class="app">
         <h1 class="app_titl">Liste seus repositórios</h1>
         <form class="app_formpesq" method="GET">
-            <input type="text">
-            <button id="btn_apppesq"><i class="fa fa-search"></i>PESQUISAR</button>
+            <input id="campo_apppesq" type="text" placeholder="Digite o nome de usuário">
+            <button id="btn_apppesq" class="btn btn--lg btn--laranja"><i class="fa fa-search"></i>PESQUISAR</button>
         </form>
-        <section class="resultado">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, natus iusto laboriosam, eveniet magni, est fugiat sed tempora cupiditate cum dolorem voluptas, necessitatibus esse. Nemo necessitatibus odit iure dolores repellendus.</p>
+        <article class="app_resut">
+            <header><h2>apiFormGithub</h2></head>
+            <p>Projeto pessoal de api consumindo o github. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+            <footer>
+                <span class="app_resut_tag app_resut_tag--amarela"><i class="fa fa-star"></i>5 STAR</span>
+                <span class="app_resut_tag app_resut_tag--azul"><i class="fa fa-code-fork"></i>5 FORKS</span>
+                <a href="#" class="repo_link" title="Ver projeto"><i class="fa fa-link"></i>VER PROJETO</a>
+            </footer>
 
-        </section>
+        </article>
+
 
     </main>
      <!-- build:jsLib js/scriptsApiGit_rodape.js -->
