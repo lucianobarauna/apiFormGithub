@@ -2,10 +2,24 @@
    Index
    ========================================================================== */
 
-.teste {
-  background-color: $cor-cinza;
-  &:hover,
-  &:active {
-    background-color: red;
+.app {
+  width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  &_titl {
+    font: 50px 'opensanslight';
+  }
+  &_formpesq {
+    input[type='text']{
+      padding-right: 25px;
+      padding-left: 25px;
+      height: 53px;
+      font-size: 16px;
+      color: $color-textform;
+      border-radius: 5px;
+      border: none;
+    }
+
   }
 }
+
