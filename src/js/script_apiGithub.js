@@ -6,19 +6,35 @@
 $(function(){
     'use strict'
 
-    var repositorio = [],
-        campoPesq = 'luciano',
-        valInput = 'Juca';
+    var repositorio = [];
+
+
+    var p = "";
+    var pesq = "";
+
+    $("btn-pesq").click(function(){
+
+        pesq = $(this).val();
+
+       if (pesq != p) {
+           // executa funcao
+       }
+
+       p = pesq;
+
+    });
 
 
 
 
+    // if(campoPesq == valInput){
+    //     alert('campos iguais')
+    // } else {
+    //     console.log('campos diferentes')
+    // }
 
-    if(campoPesq == valInput){
-        alert('campos iguais')
-    } else {
-        console.log('campos diferentes')
-    }
+
+
 
 
 
@@ -54,13 +70,17 @@ $(function(){
     function criaCard (obj){
         // Conteudos
         var repoTitl = $('<h2>').addClass('app_resut_nome').text(obj.nome),
+
             repoDesc = $('<p>').addClass('app_resut_content').text(obj.descricao),
+
             repoQtdStar = $('<span>').addClass('app_resut_tag app_resut_tag--amarela')
                                      .text(obj.stars)
                                      .prepend($('<i>').addClass('fa fa-star')),
+
             repoQtdFork = $('<span>').addClass('app_resut_tag app_resut_tag--azul')
                                      .text(obj.fork)
                                      .prepend($('<i>').addClass('fa fa-code-fork')),
+
             repoLink = $('<a>').addClass('repo_link')
                                      .attr('href', obj.link)
                                      .text('VER PROJETO')
