@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*!
- * Api github de consumo
+ * Api Github - Lista repositorios
+ * Desenvolvido por Luciano Baraúna em: 21/10/2016
  */
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -3122,6 +3123,10 @@ body {
   background-color: #1dafcb;
 }
 
+.text-center {
+  text-align: center;
+}
+
 /* ==========================================================================
    Botoes
    ========================================================================== */
@@ -3156,6 +3161,21 @@ body {
 
 .btn--laranja {
   background-color: #ef5737;
+}
+
+.loadCards {
+  display: none;
+}
+
+.alert-danger {
+  display: none;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #a94442;
+  border-radius: 10px;
+  background-color: #f2dede;
+  border-color: #ebccd1;
 }
 
 /* ==========================================================================
@@ -3227,6 +3247,10 @@ body {
     margin-left: 30px;
     width: 38%;
   }
+}
+
+.text-center .app_resut {
+  text-align: left;
 }
 
 .app_resut {

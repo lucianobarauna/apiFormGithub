@@ -1,6 +1,7 @@
 // Css raiz do projeto
 /*!
- * Api github de consumo
+ * Api Github - Lista repositorios
+ * Desenvolvido por Luciano Baraúna em: 21/10/2016
  */
 
 // Libs
@@ -8,7 +9,6 @@
 
 // Config
 @import "../sass/config/_variaveis.scss";
-@import "../sass/config/_mixings.scss";
 @import "../sass/config/_placeholder.scss";
 @import "../sass/config/_cores.scss";
 
@@ -22,6 +22,8 @@
 
 // Componentes
 @import "../sass/componentes/_btns.scss";
+@import "../sass/componentes/_loader.scss";
+@import "../sass/componentes/_alerts.scss";
 
 // Paginas
 @import "../sass/paginas/_index.scss";
