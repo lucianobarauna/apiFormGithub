@@ -7,7 +7,9 @@ Uma api que pesquisa pelo o nome usuario os repositórios dele e os lista com al
 
 ### Instruções
 
-Para fazer o projeto rodar você tem algumas opções.
+Primeiro você precisar digitar na raiz do projeto ```npm install```.
+
+Agora para fazer o projeto rodar você pode tentar algumas opções, segue elas:
 
 1º Opção
 
