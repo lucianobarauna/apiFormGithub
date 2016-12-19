@@ -1,55 +1,41 @@
 /*!
- * @Nome do projeto
- * Desenvolvido por @nome em: 21/10/2016
+ * Api Github - Lista repositorios
+ * Desenvolvido por Luciano Baraúna em: 21/10/2016
  */
 
 $(function(){
     'use strict'
 
-    var repositorio = [];
-
-
-    var p = "";
-    var pesq = "";
-
-    $("btn-pesq").click(function(){
-
-        pesq = $(this).val();
-
-       if (pesq != p) {
-           // executa funcao
-       }
-
-       p = pesq;
-
-    });
-
-
-
-
-    // if(campoPesq == valInput){
-    //     alert('campos iguais')
-    // } else {
-    //     console.log('campos diferentes')
-    // }
-
-
-
-
-
-
     $('#btn_apppesq').click(pesqRepositorios);
 
-    function pesqRepositorios(){
+    //Ajax github
+    function pesqRepositorios(event){
         event.preventDefault();
         var campoPesq = $('#campo_apppesq').val();
+
         $.ajax({
-            url: 'https://api.github.com/users/' + campoPesq + '/repos'
-        }).done(loadCards);
+            url: 'https://api.github.com/users/' + campoPesq + '/repos',
+            beforeSend: function(){
+                $('#resultado').toggleClass('text-center');
+                $('#resultado > .loadCards').fadeToggle();
+            },
+            complete: function(){
+                $('#resultado > .loadCards').fadeToggle(function(){
+                    $('#resultado').toggleClass('text-center');
+                });
+            },
+            error: function(){
+                $('#resultado > .alert-danger').fadeToggle();
+            },
+            success: listaCard
+        });
     }
 
-    function loadCards(elemento){
-        $(elemento).each(function(index){
+    // Carrega cards
+    function listaCard(elemento){
+        limpaCards();
+        $('#resultado > .alert-danger').hide();
+        $(elemento).each(function(){
             var obj = {
                         nome: this.name,
                         descricao: this.description,
@@ -63,8 +49,13 @@ $(function(){
             $box.append(card);
 
         })
-        qtdCards++
+    }
 
+    // Exclui cards
+    function limpaCards() {
+        var cards = $('#resultado .app_resut');
+        $('#resultado > .alert-danger').fadeToggle();
+        cards.remove();
     }
 
     function criaCard (obj){
@@ -102,25 +93,4 @@ $(function(){
 
     }
 
-
-
-
-
-
-
-
-
-
-
-
-// Fim fução geral
 });
-
-
-
-
-
-
-
-
-
